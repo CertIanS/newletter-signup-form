@@ -12,22 +12,26 @@
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 </head>
 <body>
-  
-  <form id="form">
-    <h1>Stay updated!</h1>
-    <p>Join 60,000+ product managers receiving monthly updates on:</p>
-    
-    <p><img src="assets/images/icon-list.svg" alt="listItem">Product discovery and building what matters</p>
-    <p><img src="assets/images/icon-list.svg" alt="listItem">Measuring to ensure updates are a success</p>
-    <p><img src="assets/images/icon-list.svg" alt="listItem">And much more!</p>
-    <div>
-      <label for="email">Email address</label>
-      <input id="email" name="email" type="email" placeholder="email@company.com"/>
+  <div id="container">
+    <div id="card">
+    <form id="form">
+      <img id="mobileImg" src="assets/images/illustration-sign-up-mobile.svg" alt="mobileImg">
+      <h1>Stay updated!</h1>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      
+      <p><img src="assets/images/icon-list.svg" alt="listItem">Product discovery and building what matters</p>
+      <p><img src="assets/images/icon-list.svg" alt="listItem">Measuring to ensure updates are a success</p>
+      <p><img src="assets/images/icon-list.svg" alt="listItem">And much more!</p>
+      <div>
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="email@company.com"/>
 
+      </div>
+      <button>Subscribe to monthly newsletter</button>
+    </form>
+    <img id="desktopImg" src="assets/images/illustration-sign-up-desktop.svg" alt="desktopImg">
     </div>
-    <button>Subscribe to monthly newsletter</button>
-    <!--TODO: place illustration "image" here-->
-  </form>
+  </div>
 
   <div id="success" style="display: none;">
     <img src="assets/images/icon-success.svg" alt="success">
