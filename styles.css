@@ -2,6 +2,12 @@ body{
     background-color: hsl(235, 18%, 26%);
     font-family: 'Roboto', sans-serif;
 }
+input{
+    border: 1px solid;
+    border-radius: 5px;
+    width: 90%;
+    height: 45px;
+}
 #container{
     display: flex;
     align-items: center;
@@ -11,7 +17,7 @@ body{
 #card{
     background-color: white;
     max-width: 800px;
-    border-radius: 10px;
+    border-radius: 20px;
     display: block;
 }
 button{
@@ -20,11 +26,25 @@ button{
     border: none;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
     padding: 5px;
     margin: 5px;
+    width: 90%;
+    height: 45px;
 }
 #success{
     background-color: white;
+}
+#error{
+    color: hsl(4, 100%, 67%);
+}
+label{
+    font-size: 13px;
+    font-weight: bold;
+}
+button:hover{
+    background-color: hsl(4, 100%, 67%);
+    cursor: pointer;
 }
 @media screen and (max-width: 399px) {
     #mobileImg{
