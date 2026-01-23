@@ -2,11 +2,48 @@ body{
     background-color: hsl(235, 18%, 26%);
     font-family: 'Roboto', sans-serif;
 }
+h1{
+    color: hsl(234, 29%, 20%);
+    font-size: 50px;
+}
+p{
+    font-size: 16px;
+}
+form{
+    padding: 15px;
+}
+span{
+    padding-left: 5px;
+    vertical-align: top;
+}
+label{
+    font-size: 13px;
+    font-weight: bold;
+}
 input{
     border: 1px solid hsl(0, 0%,58%);
     border-radius: 5px;
     width: 90%;
     height: 45px;
+    margin-top: 5px;
+}
+input::placeholder{
+    padding-left: 20px;
+}
+button{
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    width: 92%;
+    margin-top: 20px;
+    height: 45px;
+}
+button:hover{
+    background-color: hsl(4, 100%, 67%);
+    cursor: pointer;
 }
 #container{
     display: flex;
@@ -20,39 +57,16 @@ input{
     border-radius: 20px;
     display: block;
 }
-form{
-    padding: 15px;
-}
-button{
-    background-color: hsl(234, 29%, 20%);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    padding: 5px;
-    margin: 5px;
-    width: 90%;
-    height: 45px;
-}
-span{
-    padding-left: 5px;
-}
 #success{
     background-color: white;
 }
 #error{
     color: hsl(4, 100%, 67%);
 }
-label{
-    font-size: 13px;
-    font-weight: bold;
+#enterAndSubmit{
+    padding-top: 15px;
 }
-button:hover{
-    background-color: hsl(4, 100%, 67%);
-    cursor: pointer;
-}
-@media screen and (max-width: 399px) {
+@media screen and (max-width: 499px) {
     #mobileImg{
         display: block;
         padding: 0;
@@ -60,8 +74,14 @@ button:hover{
     #desktopImg{
         display: none;
     }
+    #card{
+        max-width: 375px;
+    }
 }
-@media screen and (min-width: 400px) { 
+@media screen and (min-width: 500px) { 
+    h1{
+        text-align: center;
+    }
     #mobileImg{
         display: none;
     }
@@ -70,9 +90,6 @@ button:hover{
     }
     #card{
         display: flex;
-        padding: 15px;
-    }
-    h1{
-        text-align: center;
+        padding: 20px;
     }
 }
