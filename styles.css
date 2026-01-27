@@ -13,10 +13,6 @@ p{
 form{
     padding: 25px;
 }
-span{
-    padding-left: 15px;
-    vertical-align: top;
-}
 label{
     font-size: 13px;
     font-weight: bold;
@@ -46,6 +42,18 @@ button:hover{
     background-color: hsl(4, 100%, 67%);
     cursor: pointer;
 }
+ul li{
+    background-image: url('assets/images/icon-list.svg');
+    background-repeat: no-repeat;
+    min-height: 30px;
+    padding-left: 38px;
+    padding-bottom: 8px;
+}
+ul{
+    list-style-type: none;
+    padding-left: 0;
+    padding-top: 10px;
+}
 #container{
     display: flex;
     align-items: center;
@@ -61,14 +69,14 @@ button:hover{
 #success{
     background-color: white;
 }
-#updateList{
+/*#updateList{
     margin-top: 25px;
-}
+}*/
 #error{
     color: hsl(4, 100%, 67%);
 }
 #enterAndSubmit{
-    padding-top: 15px;
+    padding-top: 2px;
 }
 @media screen and (max-width: 499px) {
     h1{
