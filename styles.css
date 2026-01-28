@@ -68,10 +68,13 @@ ul{
 }
 #success{
     background-color: white;
+    max-width: 350px;
+    border-radius: 30px;
+    padding: 20px;
 }
-/*#updateList{
-    margin-top: 25px;
-}*/
+#success h1{
+    text-align: left;
+}
 #error{
     color: hsl(4, 100%, 67%);
 }
@@ -92,6 +95,12 @@ ul{
     #card{
         max-width: 375px;
     }
+    #success button{
+        margin-top: 200px;
+    }
+    #success{
+        padding-top: 150px;
+    }
 }
 @media screen and (min-width: 500px) { 
     h1{
@@ -106,5 +115,8 @@ ul{
     #card{
         display: flex;
         padding: 20px;
+    }
+    #success{
+        padding: 60px;
     }
 }

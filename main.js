@@ -15,15 +15,15 @@ function handleSubmit(e){
         document.getElementById('email').style.borderColor = "hsl(4, 100%, 67%)";
     }
     else if(data.email.includes('@')){
-        document.getElementById("success").style.display = "block";
         document.getElementById('error').style.display = "none";
-        form.style.display = "none";
+        document.getElementById("card").style.display = "none";
+        document.getElementById("success").style.display = "block";
     }
 }
 
 function onDismiss(e){
     document.getElementById('success').style.display = "none";
-    form.style.display = "block";
+    document.getElementById("card").style.display = "flex";
 }
 
 dismiss.addEventListener('click', onDismiss);
