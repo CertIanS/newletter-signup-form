@@ -16,8 +16,12 @@ function handleSubmit(e){
     }
     else if(data.email.includes('@')){
         document.getElementById('error').style.display = "none";
+        document.getElementById('email').style.backgroundColor = "white";
+        document.getElementById('email').style.color = "black";
+        document.getElementById('email').style.borderColor = "hsl(0, 0%,58%)";
         document.getElementById("card").style.display = "none";
         document.getElementById("success").style.display = "block";
+        document.getElementById("emailText").textContent = data.email;
     }
 }
 

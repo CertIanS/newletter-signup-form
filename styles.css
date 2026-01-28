@@ -77,6 +77,7 @@ ul{
 }
 #error{
     color: hsl(4, 100%, 67%);
+    padding-left: 167px;
 }
 #enterAndSubmit{
     padding-top: 2px;
@@ -94,6 +95,9 @@ ul{
     }
     #card{
         max-width: 375px;
+    }
+    #error{
+        padding-left: 100px;
     }
     #success button{
         margin-top: 200px;
