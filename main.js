@@ -7,13 +7,13 @@ function handleSubmit(e){
 
     const data = Object.fromEntries(new FormData(e.target));
 
-    if(data.email === "" || !data.email.includes('@')){
+    if(!validateEmail(data.email)){
         document.getElementById('error').style.display = "inline";
         emailInput.style.backgroundColor = "hsl(1, 100%, 90%)";
         emailInput.style.color = "hsl(4, 100%, 67%)";
         emailInput.style.borderColor = "hsl(4, 100%, 67%)";
     }
-    else if(data.email.includes('@')){
+    else if(validateEmail(data.email)){
         document.getElementById('error').style.display = "none";
         emailInput.style.backgroundColor = "white";
         emailInput.style.color = "black";
@@ -30,12 +30,16 @@ function onDismiss(e){
 }
 
 function handleText(email){
-    if(email.includes('@')){
+    if(validateEmail(email)){
         document.getElementById('error').style.display = "none";
         emailInput.style.backgroundColor = "white";
         emailInput.style.color = "black";
-        emailInput.style.borderColor = "hsl(0, 0%,58%)";
+        emailInput.style.borderColor = "hsl(0, 0%, 58%)";
     }
+}
+
+function validateEmail(email){
+    return email.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 }
 
 dismiss.addEventListener('click', onDismiss);
