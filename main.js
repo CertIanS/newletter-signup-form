@@ -7,17 +7,12 @@ function handleSubmit(e){
 
     const data = Object.fromEntries(new FormData(e.target));
 
-    if(!validateEmail(data.email)){
-        document.getElementById('error').style.display = "inline";
-        emailInput.style.backgroundColor = "hsl(1, 100%, 90%)";
-        emailInput.style.color = "hsl(4, 100%, 67%)";
-        emailInput.style.borderColor = "hsl(4, 100%, 67%)";
-    }
-    else if(validateEmail(data.email)){
+    if(validateEmail(data.email)){
         document.getElementById('error').style.display = "none";
         emailInput.style.backgroundColor = "white";
         emailInput.style.color = "black";
         emailInput.style.borderColor = "hsl(0, 0%, 58%)";
+        emailInput.value = "";
         document.getElementById("card").style.display = "none";
         document.getElementById("success").style.display = "block";
         document.getElementById("emailText").textContent = data.email;
@@ -35,6 +30,11 @@ function handleText(email){
         emailInput.style.backgroundColor = "white";
         emailInput.style.color = "black";
         emailInput.style.borderColor = "hsl(0, 0%, 58%)";
+    }else{
+        document.getElementById('error').style.display = "inline";
+        emailInput.style.backgroundColor = "hsl(1, 100%, 90%)";
+        emailInput.style.color = "hsl(4, 100%, 67%)";
+        emailInput.style.borderColor = "hsl(4, 100%, 67%)";
     }
 }
 
