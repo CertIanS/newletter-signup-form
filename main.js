@@ -16,6 +16,11 @@ function handleSubmit(e){
         document.getElementById("card").style.display = "none";
         document.getElementById("success").style.display = "block";
         document.getElementById("emailText").textContent = data.email;
+    }else if(data.email === ""){
+        document.getElementById('error').style.display = "inline";
+        emailInput.style.backgroundColor = "hsl(1, 100%, 90%)";
+        emailInput.style.color = "hsl(4, 100%, 67%)";
+        emailInput.style.borderColor = "hsl(4, 100%, 67%)";
     }
 }
 
